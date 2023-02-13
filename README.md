@@ -1,5 +1,3 @@
-# KatmanliMimari-AspNetAPI-MVC
-
 # N Katmanlı Mimari ile uygulama nasıl inşa edilir ?
 
 - N-Katmanlı mimari, uygulamanın fonksiyonel ihtiyaçlarını veya çalışma prensiplerini belirleyerek, uygulamayı belirli katmanlara bölerek inşa edilir. Bu katmanlar, sırasıyla: veri katmanı, iş katmanı, sunum katmanı ve kullanıcı arayüzü katmanı şeklindedir. Her bir katman, bir önceki katmandaki verilere veya görevlere dayanır ve kendi görevlerini ve sorumluluklarını üstlenir. Bu sayede, uygulama içindeki farklı fonksiyonlar veya işlemler, farklı katmanlarda yapılır ve bu da uygulamanın esneklik, scalability ve maintainability gibi özelliklerini arttırır.
@@ -54,11 +52,11 @@ Bu adımlar, Service katmanını inşa etmek için bir yol gösterici olacaktır
 
 - Uygulamanın her katmanı için bu tür bir yapı, veritabanındaki verilere tek bir noktadan erişmenin ve tekrar kod yazmamanın avantajını sunar. Aynı zamanda, değişiklik yapmak istediğinizde, yalnızca bir kez değişiklik yapmanız gerektiği anlamına da gelir, bu da uygulamanızın daha kolay ve hızlı bir şekilde mantık değişikliklerine uyum sağlamasına olanak tanır.
 
-# AutoFac nedir ? nasıl kullanılır ? Projeye nasıl implement edilir ?
+# AutoFac nedir ? Nasıl kullanılır ? Projeye nasıl implement edilir ?
 
 - AutoFac, .NET uygulamaları için kullanılabilecek bir Dependency Injection (Bağımlılık Enjeksiyonu) kütüphanesidir. AutoFac, uygulamanızdaki nesnelerin oluşturulması ve çalışması için gereken bağımlılıkları yönetmenize yardımcı olur. AutoFac, kodunuzun daha temiz, daha okunabilir ve daha test edilebilir olmasını sağlar. AutoFac'ın kullanımı, uygulamanızdaki nesnelerin tanımlanması ve bunların birbirine bağımlı olduğu noktalarda tanımlanması ile gerçekleşir. AutoFac, uygulamanıza proje başlangıcından itibaren implement edilebilir veya mevcut uygulamanızda retrofitting (geri dönüştürme) yaparak kullanılabilir.
 
-# FluentValidation nedir ? nasıl kullanılır ? Projeye nasıl implement edilir ?
+# FluentValidation nedir ? Nasıl kullanılır ? Projeye nasıl implement edilir ?
 
 FluentValidation, .NET platformunda kullanılan bir doğrulama (validation) kütüphanesidir. Bu kütüphane, nesnelerin ve verilerin geçerli olup olmadığını doğrulamak için birçok farklı doğrulama kuralı sunar. Kullanımı kolay ve esnek bir API sunar ve Fluent API (akışkan API) adını verdiği bir yapıya sahiptir.
 
@@ -70,7 +68,7 @@ Projede FluentValidation'ı implement etmek için aşağıdaki adımları izleye
 
 - Uygulamanın uygun noktasında (örneğin, Program.cs) FluentValidation'ı yapılandırın ve uygulamaya ekleyin.
 
-# FluentValidation nedir ? nasıl kullanılır ? Projeye nasıl implement edilir ?
+# FluentValidation nedir ? Nasıl kullanılır ? Projeye nasıl implement edilir ?
 
 - FluentValidation, .NET platformunda kullanılan bir doğrulama (validation) kütüphanesidir. Bu kütüphane, nesnelerin ve verilerin geçerli olup olmadığını doğrulamak için birçok farklı doğrulama kuralı sunar. Kullanımı kolay ve esnek bir API sunar ve Fluent API (akışkan API) adını verdiği bir yapıya sahiptir.
 
@@ -124,7 +122,7 @@ Bu yöntemlerden en uygun olanını kullanarak, kod tekrarlarından kaçınabili
 
 - Örneğin, bir veritabanı nesnesi, Core Katmanındaki bir nesneye dönüştürülür ve bu nesne, Service Katmanındaki bir nesneye dönüştürülür. AutoMapper bu dönüşüm işlemini basit, esnek ve hızlı hale getirir. AutoMapper'ı projeye implement etmek için, kütüphaneyi projeye eklemek ve dönüştürme regülasyonlarını tanımlamak gerekir.
 
-# Çok katmanlı Mimari ile Entity Framework nasıl kullanılır ?
+# Çok Katmanlı Mimari ile Entity Framework nasıl kullanılır ?
 
 - Çok katmanlı mimaride Entity Framework, veritabanı erişimi ve veri kaydedilmesi işlemlerini yapmak için kullanılır. Entity Framework, veritabanındaki verileri C# nesnelerine dönüştüren ve bu nesneleri veritabanına kaydeden bir ORM (Object Relational Mapping) teknolojisidir. Çok katmanlı mimaride, Entity Framework genellikle "Data" katmanında kullanılır. Data katmanı, veritabanına erişimi ve veri işleme işlemlerini yapar. Entity Framework, bu işlemleri kolaylaştırarak, "Core" ve "Service" katmanlarına bu işlemleri yapması için gerekli verileri sunar.
 
@@ -136,6 +134,6 @@ Bu yöntemlerden en uygun olanını kullanarak, kod tekrarlarından kaçınabili
 
 - Ayrıca, hata durumlarını loglamak ve analiz etmek için hata raporu veritabanına kaydedilebilir veya bir log dosyasına yazılabilir. Böylece, sistem yöneticileri hata durumlarını takip edebilir ve uygulamanın performansını ve güvenliğini iyileştirebilir.
 
-# API uygulamalarımızda tek response model nasıl döneriz ? faydaları nelerdir ?
+# API uygulamalarımızda tek response model nasıl döneriz ?
 
 - API uygulamalarında tek bir response model kullanmak, API'nin daha konseptüel ve düzenli bir şekilde çalışmasını sağlar. Bu, API'nin kullanımının daha kolay hale gelmesine, API'nin daha iyi anlaşılmasına ve daha iyi dokümantasyonun yapılmasına yardımcı olabilir. Ayrıca, tek bir response model kullanmak, API'nin bakımını ve geliştirilmesini daha da kolaylaştırır, çünkü API'nin dönen verilerinin değiştiği durumlarda sadece tek bir yerde değişiklik yapmanız gerekir.
