@@ -52,7 +52,7 @@ namespace NLayer.Caching
 
         public Task<bool> AnyAsync(Expression<Func<Product, bool>> expression)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(_memoryCache.Get<List<Product>>(CacheProductKey).Where(expression.Compile()).Any());
         }
 
         public Task<IEnumerable<Product>> GetAllAsync()
